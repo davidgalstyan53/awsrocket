@@ -79,7 +79,7 @@ resource "aws_security_group" "SSH_Bastion_SG" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["23.240.208.179/32","104.35.82.154/32","172.98.87.146/32","108.185.30.189/32","47.156.147.124/32"]
+    cidr_blocks = ["public,public,public,public"] // insert public ip's
   }
 
   egress {
@@ -106,7 +106,7 @@ resource "aws_security_group" "Grafana_SG" {
     from_port = 80
     to_port = 80
     protocol = "tcp"
-    cidr_blocks = ["23.240.208.179/32","104.35.82.154/32","172.98.87.146/32","108.185.30.189/32","47.156.147.124/32"]
+    cidr_blocks = ["public,public,public,public"] // insert public ip's
   }
 
 
@@ -115,7 +115,7 @@ resource "aws_security_group" "Grafana_SG" {
     from_port = 3000
     to_port = 3000
     protocol = "tcp"
-    cidr_blocks = ["10.0.0.0/16","23.240.208.179/32","104.35.82.154/32","172.98.87.146/32","108.185.30.189/32","47.156.147.124/32"]
+    cidr_blocks = ["public,public,public,public"] // insert public ip's
   }
 
   ingress {
