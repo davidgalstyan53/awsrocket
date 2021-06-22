@@ -25,3 +25,5 @@ resource "aws_route_table_association" "rocket-vpc-private-assoc" {
   subnet_id = aws_subnet.private-subnet-1.id
   route_table_id = aws_route_table.rocket-vpc-private.id
 }
+
+//
